@@ -1,30 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Tangerine:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
-    width: 100%;
-    height: 100%;
+body{
     font-family: 'Courier New', Courier, monospace;
-    background: #cdc6be;
+    background-color: #cdc6be;
 }
 
 a {
     text-decoration: none;
     color: #cdc6be;
-}
-
-.website-content{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    padding: 2em;
-    z-index: 0;
 }
 
     /* Theme Mode button css */
@@ -37,11 +27,12 @@ body.dark{background: #141412;}
 }
 
 .checkbox-label{
-    background-color: #141412;
+    background-color: #42423f;
     width: 50px;
     height: 26px;
     border-radius: 50px;
     position: relative;
+    left: 30px;
     padding: 5px;
     cursor: pointer;
     display: flex;
@@ -70,18 +61,36 @@ body.dark{background: #141412;}
 
     /* Theme Button Css Ends */
 
+
+.website-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding: 5em;
+    color: #cdc6be;
+    mix-blend-mode: difference;
+}
+
 .hero-img{
     margin-top: 4em;
     width: 100%;
     height: 100%;
-    border: 2px solid #141412;
-    mix-blend-mode: difference;
+    font-family: 'Tangerine';
+    font-size: 50px;
+    z-index: 2;
+}
+
+.background-img{
+    margin-top: 4em;
+    z-index: 0;
 }
 
 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 nav{
@@ -93,7 +102,7 @@ nav{
     padding: 1.5em 2em;
     color: #cdc6be;
     mix-blend-mode: difference;
-    z-index: 2;
+    z-index: 3;
 }
 
 nav > div{
@@ -102,19 +111,24 @@ nav > div{
 
 .logo{
     text-align: left;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Tangerine';
+    font-size: 30px;
 }
 
 .logo a{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 70px;
+    font-weight: bold;
     color: #cdc6be;
 }
 
 .theme-btn{
 position: absolute;
 right: 150px;
+top: 22.5px;
 }
+
+
 
 .toggle-btn{
     display: flex;
@@ -196,7 +210,7 @@ right: 150px;
 .menu-item p{
     position: relative;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fredericka the Great';
     font-size: 15vw;
     line-height: 80%;
     will-change: transform;
@@ -205,17 +219,6 @@ right: 150px;
 
 .menu-item p:hover{
     letter-spacing: 0.075em;
-}
-
-.menu-item p#active::after{
-    content: "";
-    position: absolute;
-    top: 45%;
-    left: 0;
-    transform: translateY(-50%);
-    background: #c03f13;
-    width: 0%;
-    height: 12px;
 }
 
 .sub-nav{
