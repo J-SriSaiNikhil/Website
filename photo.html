@@ -139,8 +139,8 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
         window.addEventListener("load", function(){
-            const slides = gsap.utils.toArray(".slide");
-            const activeSlideImages = gsap.utils.toArray(".active-slide img");
+            const slides = gsap.utils.toArray('.slide');
+            const activeSlideImages = gsap.utils.toArray('.active-slide img');
 
             function getInitialTranslateZ(slide) {
             const style = window.getComputedStyle(slide);
@@ -168,7 +168,6 @@
                         const progress = self.progress;
                         const zIncrement = progress * 22500;
                         const currentZ = initialZ + zIncrement;
-
                         let opacity;
 
                         if (currentZ > -2500) {
@@ -179,7 +178,7 @@
 
                         slide.style.opacity = opacity;
 
-                        slide.style.transform = 'translateX(-50%) translateY(-50%) translateZ( ${currentZ}px )';
+                        slide.style.transform = `translateX(-50%) translateY(-50%) translateZ( ${currentZ}px )`;
 
                 if(currentZ < 100){
                     gsap.to(activeSlideImages[index], 1.5,{
