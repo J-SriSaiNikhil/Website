@@ -106,6 +106,12 @@ img{
     height: 100%;
 }
 
+.profile_photo{
+    height: 1200px;
+    width: 900px;
+}
+
+
 nav{
     position: fixed;
     width: 100%;
