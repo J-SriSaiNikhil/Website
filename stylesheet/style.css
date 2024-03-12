@@ -23,7 +23,7 @@ a {
 
     /* Theme Mode button css */
 
-body.dark{background: #141412;}
+/* body.dark{background: #141412;}
 
 .checkbox{
     opacity: 0;
@@ -68,7 +68,7 @@ top: 1px;
 
 .checkbox:checked + .checkbox-label .ball{
     transform: translateX(24px);
-}
+} */
 
     /* Theme Button Css Ends */
 
@@ -91,7 +91,8 @@ top: 1px;
     width: 100%;
     height: 100%;
     font-family: 'Italiana';
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: 400;
     z-index: 4;
     /* color: #cdc6be; */
 }
@@ -355,7 +356,7 @@ top: 2.25%;
         content: "Tech";
     }
     61%,80%{
-        content: "Graduate";
+        content: "Photography Enthuasist";
     }
     81%,100%{
         content: "Gamer";

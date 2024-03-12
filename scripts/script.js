@@ -43,7 +43,7 @@ window.addEventListener("load", function(){
                 }
 
                 slide.style.opacity = opacity;
-                slide.style.transform = 'translateX(-50%) translateY(-50%) translateZ(${currentZ}px)';
+                slide.style.transform = `translateX(-50%) translateY(-50%) translateZ(${currentZ}px)`;
 
                 if(currentZ < 100){
                     gsap.to(activeSlideImages[index], 1.5,{
