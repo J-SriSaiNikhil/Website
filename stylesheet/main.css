@@ -28,10 +28,13 @@ a, p{
 nav{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     padding: 1.5em 2em;
     display: flex;
     align-items: center;
+    z-index: 1;
+    background: transparent;
+    backdrop-filter: blur(10px);
 }
 
 footer{
@@ -42,6 +45,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 nav > div{
@@ -75,6 +79,8 @@ nav > div{
     position: fixed;
     top: 45%;
     left: 70%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container{
@@ -206,7 +212,7 @@ nav > div{
 
 #slide-10{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 30%;
     transform: translateX(-50%) translateY(-50%) translateZ(0px);
     opacity: 1;
