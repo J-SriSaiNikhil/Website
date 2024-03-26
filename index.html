@@ -9,6 +9,9 @@
 </head>
 <body>
     <!-- Header ekada nunchi -->
+    <div class="cursor">
+        <img src="media/cursor.png" alt="" />
+    </div>
 
     <nav>
         <div class="logo_mine">
@@ -42,7 +45,7 @@
                     <p id="active"><a href="photo.html">Photography</a></p>
                 </div>
                 <div class="menuitem">
-                    <p><a href="#">Work</a></p>
+                    <p><a href="photo1.html">Work</a></p>
                 </div>
                 <div class="menuitem">
                     <p><a href="#">About</a></p>
@@ -84,6 +87,16 @@
     <script src="scripts\gsap.min.js"></script>
     <script src="scripts\EaselPlugin.min.js"></script>
     <script>
+        const cursor = document.querySelector(".cursor");
+        document.addEventListener("mousemove", (e) =>{
+            gsap.to(cursor,{
+                x: e.clientX - cursor.offsetWidth / 2,
+                y: e.clientY - cursor.offsetHeight / 2,
+                duration: 0.5,
+                ease: "power2.out",
+            });
+        });
+
     document.addEventListener("DOMContentLoaded",function(){
         const activeItemIndicator = CSSRulePlugin.getRule(".menuitem p#active::after");
         const toggleBotton = document.querySelector(".menuBtn");

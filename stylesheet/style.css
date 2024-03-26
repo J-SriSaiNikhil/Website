@@ -16,6 +16,18 @@ html,body{
     background: #cdc6be;
 }
 
+.cursor{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 991;
+}
+
 a {
     text-decoration: none;
     color: #cdc6be;
@@ -122,7 +134,7 @@ nav{
     padding: 1.5em 2em;
     color: #cdc6be;
     mix-blend-mode: difference;
-    z-index: 996;
+    z-index: 992;
 }
 
 .menu-face{
@@ -220,7 +232,7 @@ top: 2.25%;
     background: #141412;
     clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
     will-change: transform;
-    z-index: 995;
+    z-index: 991;
 }
 
 .overlaymenu{
