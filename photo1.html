@@ -51,23 +51,23 @@
             const clickSfx = new Audio("media/audio.mp3");
             clickSfx.play();
 
-            const itemType = Math.random() > 0.5 ? "video" : "image";  
+            // const itemType = Math.random() > 0.5 ? "video" : "image";  
             let container = document.createElement("div");
             let elementWidth = 700;
 
-            if(itemType === "video"){
-                const videonumber = Math.floor(Math.random() * 6) + 1;
-                container.innerHTML = `<div class="video-container">
-                                            <video autoplay loop>
-                                                <source src="./saruku/video-${videonumber}.mp4" type="mp4/"/>
-                                            </video>
-                                        </div>`;
-            } else{
+            // if(itemType === "video"){
+            //     const videonumber = Math.floor(Math.random() * 6) + 1;
+            //     container.innerHTML = `<div class="video-container">
+            //                                 <video autoplay loop>
+            //                                     <source src="./saruku/video-${videonumber}.mp4" type="mp4/"/>
+            //                                 </video>
+            //                             </div>`;
+            // } else{
                 const imgnumber = Math.floor(Math.random() * 6) + 1;
                 container.innerHTML = `<div class="img-container">
                                             <img src="./saruku/image-${imgnumber}.jpg" alt = "" />
                                         </div>`;
-            }
+            // }
 
             const appendedElement = container.firstChild;
             document.querySelector(".items-container").appendChild(appendedElement);
