@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 document.addEventListener("DOMContentLoaded", () => {
     const itemsContainer = document.querySelector(".items");
     const itemscols = document.querySelectorAll(".items-col");
@@ -37,13 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function addItemsToCols(filter = "all"){
         let colIndex = 0;
         const filteredItems = items.filter(
-            (item) => filter === "all" || item.tag.includes(filter)
+            (item) => (filter === "all" || item.tag.includes(filter))
         );
 
         filteredItems.forEach((item) => {
             const itemElement = document.createElement("div");
             itemElement.className = "item";
-            itemElement.innerHTML = `    <div class="item-img">
+            itemElement.innerHTML = `   <div class="item-img">
                                             <img src="${item.img}" alt="">
                                         </div>
                                         <div class="item-copy"><p>${item.title}</p></div>

@@ -52,12 +52,16 @@ nav{
     flex: 1;
 }
 
-p{
+p,a{
+    text-decoration: none;
+    font-size: 2vw;
     font-weight: 500;
     color: #fff;
     opacity: 0.5;
     letter-spacing: 0;
 }
+
+
 
 .header{
     position: absolute;
@@ -74,6 +78,12 @@ p{
     line-height: 100%;
 }
 
+.header h3{
+    text-transform: uppercase;
+    font-size: 8vw;
+    color: #fff;
+    text-align: center;
+}
 
 video,img{
     width: 100%;
