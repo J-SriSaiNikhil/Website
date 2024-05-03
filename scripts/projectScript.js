@@ -1,9 +1,9 @@
-import { mapClasses, previews } from "./projectData";
+import { mapClasses, previews } from "./projectData.js";
 
-document . addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
     const container = document.querySelector(".container");
     const previewBg = document.querySelector(".preview-bg");
-    const items = document.querySelectorAll("item");
+    const items = document.querySelectorAll(".item");
     let activePreview = document.querySelector(".preview.default");
 
     let isMouseOverItem = false;
@@ -102,11 +102,11 @@ document . addEventListener("DOMContentLoaded", function(){
     items.forEach((item,index) => {
         item.addEventListener("mouseenter", () => {
             isMouseOverItem = true;
-            const newBg = `saruku\image-${index + 1}.jpg`;
+            const newBg = `saruku/image-${index + 1}.jpg`;
             changeBg(newBg);
 
             const newActivePreview = document.querySelector(`.preview-${index+1}`);
-            if(activePreview && activePreview !== newActivePreview){
+            if(activePreview && activePreview != newActivePreview){
                 const previousActivePreviewImg = activePreview.querySelector("preview-img");
                 const previousDefaultClipPath = getDefaultClipPath(activePreview);
                 gsap.to(previousActivePreviewImg,{
@@ -146,7 +146,7 @@ document . addEventListener("DOMContentLoaded", function(){
 
             setTimeout(() => {
                 if(!isMouseOverItem) {
-                    changeBg("media\image5.jpg");
+                    changeBg("media/image5.jpg");
                     if(activePreview){
                         gsap.to(activePreview, { opacity:0, duration: 0.1});
                         const defaultPreview = document.querySelector(".preview.default");
@@ -164,5 +164,15 @@ document . addEventListener("DOMContentLoaded", function(){
                 }
             }, 10);
         });
+    });
+});
+
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", (e) =>{
+    gsap.to(cursor,{
+        x: e.clientX - cursor.offsetWidth / 2,
+        y: e.clientY - cursor.offsetHeight / 2,
+        duration: 0.5,
+        ease: "power.out",
     });
 });

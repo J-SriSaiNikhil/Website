@@ -12,7 +12,7 @@ document.addEventListener("mousemove", (e) =>{
 
 
 document.addEventListener("click", function(event){
-    const clickSfx = new Audio("media/audio.mp3");
+    const clickSfx = new Audio(" ");
     clickSfx.play();
 
     // const itemType = Math.random() > 0.5 ? "video" : "image";  

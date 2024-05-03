@@ -90,3 +90,13 @@ for(let i =2; i<= totalSections; i++){
         );
     }
 }
+
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", (e) =>{
+    gsap.to(cursor,{
+        x: e.clientX - cursor.offsetWidth / 2,
+        y: e.clientY - cursor.offsetHeight / 2,
+        duration: 0.5,
+        ease: "power2.out",
+    });
+});

@@ -14,9 +14,8 @@ body{
 
 .cursor{
     position: absolute;
-    width: 150px;
-    height: 150px;
-    background: #fff;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
     display: flex;
     justify-content: center;

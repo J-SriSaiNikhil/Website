@@ -12,10 +12,10 @@ export const mapClasses = [
 ];
 export const previews = [
     {
-        img: "",
-        title: "",
-        tags: "",
-        description:"",
+        img: "saruku/image-1.jpg",
+        title: "Vintage",
+        tags: "Photos",
+        description:"aiulkdsuhrg kjdrnmfg iudnhjfiun df ohn",
     },
     {
         img: "",

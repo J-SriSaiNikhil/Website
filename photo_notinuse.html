@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="cursor">
+        <img src="media/cursor.png" alt="" />
+    </div>
+
 <div class="menu">
     <nav>
         <div class="links-1">
@@ -142,6 +147,16 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
     <script>
+        const cursor = document.querySelector(".cursor");
+        document.addEventListener("mousemove", (e) =>{
+            gsap.to(cursor,{
+            x: e.clientX - cursor.offsetWidth / 2,
+            y: e.clientY - cursor.offsetHeight / 2,
+            duration: 0.5,
+            ease: "power2.out",
+            });
+        });
+
         gsap.registerPlugin(ScrollTrigger);
         window.addEventListener("load", function(){
             const slides = gsap.utils.toArray('.slide');
