@@ -13,7 +13,7 @@ html,body{
     width: 100vw;
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
-    background: #cdc6be;
+    background: #C0BBB1;
 }
 
 .cursor{
@@ -24,12 +24,12 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 991;
+    z-index: 992;
 }
 
 a {
     text-decoration: none;
-    color: #cdc6be;
+    color: #C0BBB1;
 }
 
     /* Theme Mode button css */
@@ -67,7 +67,7 @@ top: 1px;
 .fa-sun{color: #f39c12;}
 
 .checkbox-label .ball{
-    background-color: #cdc6be;
+    background-color: #C0BBB1;
     width: 22px;
     height: 22px;
     position: absolute;
@@ -91,9 +91,8 @@ top: 1px;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 4;
     padding: 5em;
-    /* color: #cdc6be; */
+    /* color: #C0BBB1; */
     /* mix-blend-mode: difference; */
 }
 
@@ -103,9 +102,15 @@ top: 1px;
     height: 100%;
     font-family: 'Italiana';
     font-size: 60px;
-    font-weight: 400;
-    z-index: 4;
-    /* color: #cdc6be; */
+    font-weight: 500;
+    z-index: 992;
+    /* color: #C0BBB1; */
+    /* clip-path: circle(50% at 50% 50%); */
+}
+
+.glitch{
+    color: #264E36;
+    font-weight: 600;
 }
 
 .background-img{
@@ -131,9 +136,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 2em;
-    color: #cdc6be;
+    color: #C0BBB1;
     mix-blend-mode: difference;
-    z-index: 992;
+    z-index: 993;
 }
 
 .menu-face{
@@ -161,7 +166,7 @@ nav > div{
 .logo_mine a{
     text-decoration: none;
     font-size: 70px;
-    color: #cdc6be;
+    color: #C0BBB1;
 }
 
 /* .theme-btn{
@@ -200,7 +205,7 @@ top: 2.25%;
     width: 40px;
     height: 2px;
     position: absolute;
-    background: #cdc6be;
+    background: #C0BBB1;
     transition: all 150ms ease-out;
     will-change: transform;
 }
@@ -231,7 +236,7 @@ top: 2.25%;
     background: #141412;
     clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
     will-change: transform;
-    z-index: 991;
+    z-index: 992;
 }
 
 .overlaymenu{
@@ -278,9 +283,10 @@ top: 2.25%;
 }
 
 .subnav p{
-    font-family: 'Tangerine';
-    font-size: 40px;
-    color: #cdc6be;
+    font-family: 'Italiana';
+    font-size: 2vw;
+    color: #C0BBB1;
+    z-index: 992;
 }
 
 @media(max-width: 900px){
@@ -332,7 +338,7 @@ top: 2.25%;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    background-color: #cdc6be;
+    background-color: #C0BBB1;
     border-left: 2px solid #141412;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
@@ -340,7 +346,7 @@ top: 2.25%;
 
 @keyframes cursor {
     to{
-        border-left: 2px solid #cdc6be;
+        border-left: 2px solid #C0BBB1;
     }
 }
 
@@ -370,3 +376,59 @@ top: 2.25%;
         width: calc(100% + 8px);
     }
 }
+ 
+ /* .glitch {
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #1d3728;
+    z-index: 1;
+ } */
+ 
+ /* .glitch:before,
+ .glitch:after {
+    display: block;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+ }
+ 
+ .glitch:before {
+    animation: glitch-it 1ms cubic-bezier(0.25, 0.5, 0.75, 0.94) both infinite;
+    color: #E7E8D1;
+    z-index: -1;
+ }
+ 
+ .glitch:after {
+    animation: glitch-it 1ms cubic-bezier(0.25, 0.5, 0.75, 0.94) reverse both infinite;
+    color: #0bbaff;
+    z-index: -2;
+ }
+ 
+ @keyframes glitch-it {
+    0% {
+       transform: translate(0);
+    }
+    20% {
+       transform: translate(-2px, 2px);
+    }
+    40% {
+       transform: translate(2px, -2px);
+    }
+    60% {
+       transform: translate(-2px, 2px);
+    }
+    80% {
+       transform: translate(2px, -2px);
+    }
+    to {
+       transform: translate(0);
+    }
+ } */
+
+
+
+ /* #B85042, #E7E8D1, #A7BEAE */

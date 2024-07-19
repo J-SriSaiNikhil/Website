@@ -1,51 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+html,body{
+    height: 100vh;
+    font-family: 'Italiana';
+    background: #C0BBB1;
 }
 
-.wrapper{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
+a {
+    text-decoration: none;
+    color: #C0BBB1;
 }
 
 nav{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    display: flex;
-    padding: 2em;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 2em;
+        color: #C0BBB1;
+        mix-blend-mode: difference;
+        z-index: 993;
 }
 
-.nav-item:nth-child(1){
-    flex: 3;
-}
-
-.nav-item:nth-child(2){
-    flex: 2;
-    display: flex;
-}
-
-.nav-item:nth-child(2) p{
+nav > div{
     flex: 1;
 }
 
-p,a{
-    text-decoration: none;
-    font-size: 2vw;
-    font-weight: 500;
-    color: #000;
-    opacity: 0.5;
-    letter-spacing: 0;
+.logo_mine{
+    position: relative;
+    text-align: left;
+    font-family: 'Tangerine';
+    font-size: 30px;
 }
+
+.logo_mine a{
+    text-decoration: none;
+    font-size: 70px;
+    color: #C0BBB1;
+    font-family: 'Tangerine';
+}
+
+#moon{
+    position: absolute;
+    left: 25px;
+}
+
+.toggle-btn1{
+    display: flex;
+    justify-content: end;
+}
+
+.menuBtn{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1.75em 2em 1.5em 2em;
+    background: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    width: 28px;
+    height: 20px;
+    transition: all 150ms ease-out;
+    cursor: pointer;
+}
+
+.menuBtn:before,
+.menuBtn:after{
+    content: "";
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background: #C0BBB1;
+    transition: all 150ms ease-out;
+    will-change: transform;
+}
+
+.menuBtn:before{
+    transform: translateY(-3px);
+}
+
+.menuBtn:after{
+    transform: translateY(3px);
+}
+
+.active.menuBtn:before{
+    transform: translateY(0) rotate(45deg);
+}
+
+.active.menuBtn:after{
+    transform: translateY(0) rotate(-45deg);
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: #141412;
+    clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
+    will-change: transform;
+    z-index: 992;
+}
+
+.overlaymenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem{
+    display: flex;
+    cursor: pointer;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+.menuitem p{
+    position: relative;
+    text-align: center;
+    font-family: 'Italiana';
+    font-size: 10vw;
+    line-height: 100%;
+    will-change: transform;
+    transition: letter-spacing 0.3s;
+}
+
+.menuitem p:hover{
+    letter-spacing: 0.075em;
+}
+
+.subnav{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5em;
+    opacity: 0;
+}
+
+.subnav p{
+    font-family: 'Italiana';
+    font-size: 2vw;
+    color: #C0BBB1;
+    z-index: 992;
+}
+
+@media(max-width: 900px){
+    .logo_mine a{
+        font-size: 20px;
+    }
+}
+
 
 img{
     width: 100%;
@@ -79,7 +202,6 @@ img{
     position: relative;
     bottom: 10px;
     padding: 0 0.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 500;
 }
@@ -98,7 +220,7 @@ img{
 }
 
 .filter.active h1 span{
-    color: chartreuse;
+    color: #264E36;
 }
 
 .items{
@@ -111,11 +233,10 @@ img{
     display: flex;
 }
 
-.items p,a{
+.items p{
     position: relative;
     bottom: 10px;
     padding: 0 0.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 500;
 }
@@ -138,11 +259,20 @@ img{
 .item-img{
     width: 100%;
     height: 300px;
+    border-style: solid;
+    border-bottom-width: 3vh;
+    border-radius: 1%;
+    border-color: #dceefd;
+    filter : grayscale(0.89)
+}
+
+.item-img:hover{
+    animation-delay: 10ms;
+    filter: grayscale(0);
 }
 
 .item-copy p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 1vw;
+    font-weight: 600;
     margin: 0.5em 0;
 }
