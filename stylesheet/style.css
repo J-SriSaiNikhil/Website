@@ -141,10 +141,23 @@ nav{
     z-index: 993;
 }
 
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    color: #C0BBB1;
+    mix-blend-mode: difference;
+    z-index: 993;
+}
+
 .download_btn{
     position: relative;
     align-items: center;
-    right: 2vw;
+    right: 4vw;
     display: flex;
     flex-direction: row;
 }
@@ -198,7 +211,10 @@ top: 2.25%;
 
 .toggle-btn1{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .menuBtn{
@@ -307,6 +323,9 @@ top: 2.25%;
 
 @media(max-width: 900px){
     .logo_mine a{
+        font-size: 20px;
+    }
+    .download_btn a{
         font-size: 20px;
     }
 }
