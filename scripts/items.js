@@ -1,6 +1,19 @@
 const items = [
-    {title: "name displays on page", tag: ["all"], img: "media/image1.jpg",link:"index.html"},
-    {title: "name displays on page", tag: ["mix"], img: "media/image6.jpg"},
-    {title: "name displays on page", tag: ["design"], img: "media/image4.jpg"},
-    {title: "name displays on page", tag:["production"], img: "media/wraith papa.mp4"}
+    {title: "name displays on page", tag: ["mix"], img: "media/image1.jpg"},
+    {title: "name displays on page", tag: ["mix"], img: "media/image2.jpg"},
+    {title: "name displays on page", tag: ["design"], img: "media/image3.jpg"},
+    {title: "name displays on page", tag:["production"], img: "media/image4.jpg"},
+    {title: "name ?????", tag:['design'], img:"media/image5.jpg"},
+    {title: "name ???", tag:['production'], img:"media/image6.jpg"},
+    {title: "name????", tag:['mix'], img:"media/image7.jpeg"},
+    {title: "name????", tag:['production'], img:"media/image8.jpeg"},
+    {title: "name????", tag:['mix'], img:"media/image9.jpg"},
+    {title: "name????", tag:['production'], img:"media/image10.jpg"},
+    {title: "name????", tag:['production'], img:"media/image11.jpg"},
+    {title: "name????", tag:['production'], img:"media/image12.jpg"},
+    {title: "name????", tag:['production'], img:"media/image13.jpg"},
+    {title: "name????", tag:['production'], img:"media/image14.jpg"},
+    {title: "name????", tag:['production'], img:"media/image15.jpg"},
+    {title: "name????", tag:['production'], img:"media/image16.jpg"},
+    {title: "name????", tag:['production'], img:"media/image17.jpg"},
 ];
